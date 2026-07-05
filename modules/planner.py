@@ -209,7 +209,16 @@ class TreatmentPlanner:
         """Module interface — generates a sample plan"""
         # This is called post-diagnosis; use KB result
         result = self.create_treatment_plan('flu', 'MEDIUM')
-        result['summary']    = f"Plan: {result['steps']} steps generated"
+
+        # create_treatment_plan may fail to generate a plan and return an error
+        # dict without the 'steps' key.
+        steps = result.get('steps')
+        if isinstance(steps, int):
+            result['summary'] = f"Plan: {steps} steps generated"
+        else:
+            result['summary'] = "No treatment plan found"
+            # keep error information if present
+
         result['diagnosis']  = 'flu'
         result['confidence'] = 0.7
         return result
