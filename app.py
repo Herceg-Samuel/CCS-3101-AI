@@ -10,7 +10,13 @@ import warnings
 import numpy as np  
 import matplotlib.pyplot as plt  
 import matplotlib.gridspec as gridspec  
-warnings.filterwarnings('ignore')  
+warnings.filterwarnings('ignore') 
+
+import os
+# Hide oneDNN optimization logs
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+# Hide standard informational TensorFlow logs (0 = all logs, 1 = hide INFO, 2 = hide WARNINGS)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # Import all modules  
 from modules.agent          import HealthcareDiagnosticAgent, PatientPercept  
@@ -50,9 +56,46 @@ def build_system() -> HealthcareDiagnosticAgent:
     agent = HealthcareDiagnosticAgent()  
 
     print("\n  Initializing modules...")  
-    modules = {  
-        'KnowledgeBase': MedicalKnowledgeBase(),  
-        'BayesianNet':   SimpleBayesianDiagnostics(),  
-        'MLClassifier':  MLDiagnosticClassifier(),  
-        'NeuralNetwork': NeuralDiagnosticModel(),  
-        'Fuzzy
+    agent.register_module('KnowledgeBase', MedicalKnowledgeBase())  
+    agent.register_module('BayesianNet',   SimpleBayesianDiagnostics())  
+    agent.register_module('MLClassifier',  MLDiagnosticClassifier())  
+    agent.register_module('NeuralNetwork', NeuralDiagnosticModel())  
+    agent.register_module('Fuzzy',         FuzzySeverityAssessor())  
+    agent.register_module('Planner',       TreatmentPlanner())  
+
+    # Create mock patient data that fits the PatientPercept dataclass requirements
+    section("🩺 Simulating Patient Presentation")
+    test_patient = PatientPercept(
+        patient_id="PAT-2026-001",
+        symptoms=["fever", "cough", "shortness_of_breath"],
+        age=45,
+        temperature=39.2,         # High fever -> will trigger urgent pathways
+        heart_rate=105,
+        blood_pressure="135/85"
+    )
+    
+    print(f"  Patient ID:  {test_patient.patient_id}")
+    print(f"  Symptoms:    {', '.join(test_patient.symptoms)}")
+    print(f"  Temperature: {test_patient.temperature}°C")
+
+    # Run the full lifecycle loop automatically via the agent's run method
+    section("Running Patient Evaluation Pipeline")
+    final_report = agent.run(test_patient)
+
+    # Print the final diagnostic output report nicely formatted
+    section("Final Diagnostic Decision Report")
+    print(json.dumps(final_report, indent=4))
+
+    # Show the internal workflow history log and metrics
+    agent.print_log()
+    
+    perf = agent.get_performance()
+    print(f"\n System Metrics Score: {perf['performance_score']} pts")
+    
+    return agent
+
+if __name__ == "__main__":
+    banner()
+    diagnostic_agent = build_system()
+
+ 

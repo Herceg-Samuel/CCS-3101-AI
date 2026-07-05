@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
+from typing import List, Dict
 
 class MLDiagnosticClassifier:
     """

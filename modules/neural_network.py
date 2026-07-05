@@ -7,6 +7,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models, callbacks
 import matplotlib.pyplot as plt
+from typing import List, Dict
 
 class NeuralDiagnosticModel:
     """

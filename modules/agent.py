@@ -8,6 +8,8 @@ from dataclasses import dataclass, field
 from typing import List, Dict, Optional
 import datetime
 
+# from knowledge_base import MedicalKnowledgeBase  
+
 class AgentState(Enum):
     IDLE         = "idle"
     COLLECTING   = "collecting_symptoms"
@@ -206,3 +208,5 @@ class HealthcareDiagnosticAgent:
             'performance_score': self.performance_score,
             'diagnoses_made':    len(self.memory.diagnosis_history)
         }
+    
+HealthcareDiagnosticAgent()
