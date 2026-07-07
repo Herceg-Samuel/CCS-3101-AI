@@ -43,3 +43,11 @@ python app.py
 ```text
 python -m tests.agent
 ```
+
+For additional tests, replace agents with file name eg planner:
+
+```text
+python -m tests.planner
+```
+
+And on and on.
