@@ -37,3 +37,9 @@ pip install -r requirements.txt
 ```text
 python app.py
 ```
+
+## Tests
+
+```text
+python -m tests.agent
+```
