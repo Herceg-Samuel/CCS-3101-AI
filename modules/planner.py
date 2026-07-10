@@ -47,7 +47,8 @@ class TreatmentPlanner:
                 'name': 'ReceiveBloodResults',
                 'precond': {'BLOOD_RESULTS_PENDING'},
                 'delete':  {'BLOOD_RESULTS_PENDING'},
-                'add':     {'BLOOD_RESULTS_AVAILABLE', 'DIAGNOSIS_REFINED'},
+                'add':     {'BLOOD_RESULTS_AVAILABLE', 'DIAGNOSIS_REFINED',
+                            'DIAGNOSIS_CONFIRMED'},
                 'cost': 0, 'duration': '2 hours'
             },
             {
@@ -78,6 +79,14 @@ class TreatmentPlanner:
                 'delete':  {'BACTERIAL_INFECTION'},
                 'add':     {'ANTIBIOTICS_PRESCRIBED', 'TREATMENT_STARTED'},
                 'cost': 1, 'duration': '10 minutes'
+            },
+            {
+                'name': 'StartDiabetesManagement',
+                'precond': {'DIAGNOSIS_CONFIRMED', 'ENDOCRINE_CONDITION'},
+                'delete':  {'ENDOCRINE_CONDITION'},
+                'add':     {'DIABETES_MANAGEMENT_STARTED',
+                            'TREATMENT_STARTED'},
+                'cost': 1, 'duration': '30 minutes'
             },
             {
                 'name': 'AdministerFluids',
@@ -161,7 +170,7 @@ class TreatmentPlanner:
                              'ICU_AVAILABLE'},
             'tuberculosis': {'BACTERIAL_INFECTION', 'CONTAGIOUS_DISEASE',
                              'DIAGNOSIS_NEEDED'},
-            'diabetes':     {'DIAGNOSIS_NEEDED'},
+            'diabetes':     {'DIAGNOSIS_NEEDED', 'ENDOCRINE_CONDITION'},
             'common_cold':  {'VIRAL_INFECTION', 'DIAGNOSIS_NEEDED'},
         }
 
