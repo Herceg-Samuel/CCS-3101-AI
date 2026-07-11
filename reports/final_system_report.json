@@ -80,7 +80,7 @@
   "reports": [
     {
       "patient_id": "DEMO-001",
-      "timestamp": "2026-07-11T10:37:57.328763",
+      "timestamp": "2026-07-11T11:26:49.028047",
       "symptoms": [
         "body_aches",
         "fatigue",
@@ -90,7 +90,7 @@
       ],
       "expected_diagnosis": "flu",
       "diagnosis": "flu",
-      "confidence": 0.617,
+      "confidence": 0.624,
       "urgency": "HIGH",
       "severity": {
         "severity_score": 63.43,
@@ -335,19 +335,19 @@
           "summary": "Random Forest: flu (89.00%)"
         },
         "NeuralNetwork": {
-          "diagnosis": "common_cold",
-          "confidence": 0.1329,
+          "diagnosis": "flu",
+          "confidence": 0.1618,
           "all_probs": {
-            "cardiac_event": 0.13009999692440033,
-            "common_cold": 0.13289999961853027,
-            "covid19": 0.12800000607967377,
-            "dengue": 0.121799997985363,
-            "diabetes": 0.12030000239610672,
-            "flu": 0.12389999628067017,
-            "meningitis": 0.12790000438690186,
-            "tuberculosis": 0.11509999632835388
+            "cardiac_event": 0.10589999705553055,
+            "common_cold": 0.1266999989748001,
+            "covid19": 0.13040000200271606,
+            "dengue": 0.1096000000834465,
+            "diabetes": 0.11569999903440475,
+            "flu": 0.16179999709129333,
+            "meningitis": 0.12839999794960022,
+            "tuberculosis": 0.12139999866485596
           },
-          "summary": "DNN: common_cold (13.29%)"
+          "summary": "DNN: flu (16.18%)"
         },
         "Fuzzy": {
           "severity_score": 63.43,
@@ -441,7 +441,7 @@
     },
     {
       "patient_id": "DEMO-002",
-      "timestamp": "2026-07-11T10:37:57.328763",
+      "timestamp": "2026-07-11T11:26:49.028047",
       "symptoms": [
         "cough",
         "fatigue",
@@ -449,7 +449,7 @@
       ],
       "expected_diagnosis": "common_cold",
       "diagnosis": "common_cold",
-      "confidence": 0.53,
+      "confidence": 0.534,
       "urgency": "LOW",
       "severity": {
         "severity_score": 35.0,
@@ -692,19 +692,19 @@
           "summary": "Random Forest: common_cold (99.45%)"
         },
         "NeuralNetwork": {
-          "diagnosis": "common_cold",
-          "confidence": 0.137,
+          "diagnosis": "flu",
+          "confidence": 0.1524,
           "all_probs": {
-            "cardiac_event": 0.13410000503063202,
-            "common_cold": 0.13699999451637268,
-            "covid19": 0.12319999933242798,
-            "dengue": 0.1234000027179718,
-            "diabetes": 0.11710000038146973,
-            "flu": 0.12680000066757202,
-            "meningitis": 0.12700000405311584,
-            "tuberculosis": 0.11129999905824661
+            "cardiac_event": 0.11559999734163284,
+            "common_cold": 0.1363999992609024,
+            "covid19": 0.13449999690055847,
+            "dengue": 0.09130000323057175,
+            "diabetes": 0.13349999487400055,
+            "flu": 0.15240000188350677,
+            "meningitis": 0.1168999969959259,
+            "tuberculosis": 0.11959999799728394
           },
-          "summary": "DNN: common_cold (13.70%)"
+          "summary": "DNN: flu (15.24%)"
         },
         "Fuzzy": {
           "severity_score": 35.0,
@@ -798,7 +798,7 @@
     },
     {
       "patient_id": "DEMO-003",
-      "timestamp": "2026-07-11T10:37:57.328763",
+      "timestamp": "2026-07-11T11:26:49.028047",
       "symptoms": [
         "blurred_vision",
         "excessive_thirst",
@@ -806,7 +806,7 @@
       ],
       "expected_diagnosis": "diabetes",
       "diagnosis": "diabetes",
-      "confidence": 0.739,
+      "confidence": 0.749,
       "urgency": "LOW",
       "severity": {
         "severity_score": 35.0,
@@ -1050,18 +1050,18 @@
         },
         "NeuralNetwork": {
           "diagnosis": "diabetes",
-          "confidence": 0.1401,
+          "confidence": 0.1799,
           "all_probs": {
-            "cardiac_event": 0.11599999666213989,
-            "common_cold": 0.1151999980211258,
-            "covid19": 0.1281999945640564,
-            "dengue": 0.12860000133514404,
-            "diabetes": 0.14010000228881836,
-            "flu": 0.12349999696016312,
-            "meningitis": 0.12189999967813492,
-            "tuberculosis": 0.1265999972820282
+            "cardiac_event": 0.15449999272823334,
+            "common_cold": 0.14079999923706055,
+            "covid19": 0.10480000078678131,
+            "dengue": 0.0908999964594841,
+            "diabetes": 0.17990000545978546,
+            "flu": 0.10350000113248825,
+            "meningitis": 0.1103999987244606,
+            "tuberculosis": 0.1151999980211258
           },
-          "summary": "DNN: diabetes (14.01%)"
+          "summary": "DNN: diabetes (17.99%)"
         },
         "Fuzzy": {
           "severity_score": 35.0,
@@ -1155,7 +1155,7 @@
     },
     {
       "patient_id": "DEMO-004",
-      "timestamp": "2026-07-11T10:37:57.328763",
+      "timestamp": "2026-07-11T11:26:49.028047",
       "symptoms": [
         "cough",
         "fatigue",
@@ -1166,7 +1166,7 @@
       ],
       "expected_diagnosis": "tuberculosis",
       "diagnosis": "tuberculosis",
-      "confidence": 0.625,
+      "confidence": 0.623,
       "urgency": "HIGH",
       "severity": {
         "severity_score": 77.83,
@@ -1439,19 +1439,19 @@
           "summary": "Random Forest: tuberculosis (97.00%)"
         },
         "NeuralNetwork": {
-          "diagnosis": "cardiac_event",
-          "confidence": 0.1593,
+          "diagnosis": "covid19",
+          "confidence": 0.1506,
           "all_probs": {
-            "cardiac_event": 0.15929999947547913,
-            "common_cold": 0.14409999549388885,
-            "covid19": 0.11190000176429749,
-            "dengue": 0.11020000278949738,
-            "diabetes": 0.10400000214576721,
-            "flu": 0.12710000574588776,
-            "meningitis": 0.14219999313354492,
-            "tuberculosis": 0.10109999775886536
+            "cardiac_event": 0.1152999997138977,
+            "common_cold": 0.12680000066757202,
+            "covid19": 0.15060000121593475,
+            "dengue": 0.10119999945163727,
+            "diabetes": 0.14000000059604645,
+            "flu": 0.12409999966621399,
+            "meningitis": 0.11089999973773956,
+            "tuberculosis": 0.13120000064373016
           },
-          "summary": "DNN: cardiac_event (15.93%)"
+          "summary": "DNN: covid19 (15.06%)"
         },
         "Fuzzy": {
           "severity_score": 77.83,
@@ -1546,7 +1546,7 @@
     },
     {
       "patient_id": "DEMO-005",
-      "timestamp": "2026-07-11T10:37:57.329761",
+      "timestamp": "2026-07-11T11:26:49.028047",
       "symptoms": [
         "body_aches",
         "fatigue",
@@ -1556,7 +1556,7 @@
       ],
       "expected_diagnosis": "flu",
       "diagnosis": "flu",
-      "confidence": 0.617,
+      "confidence": 0.624,
       "urgency": "HIGH",
       "severity": {
         "severity_score": 63.43,
@@ -1801,19 +1801,19 @@
           "summary": "Random Forest: flu (89.00%)"
         },
         "NeuralNetwork": {
-          "diagnosis": "common_cold",
-          "confidence": 0.1329,
+          "diagnosis": "flu",
+          "confidence": 0.1618,
           "all_probs": {
-            "cardiac_event": 0.13009999692440033,
-            "common_cold": 0.13289999961853027,
-            "covid19": 0.12800000607967377,
-            "dengue": 0.121799997985363,
-            "diabetes": 0.12030000239610672,
-            "flu": 0.12389999628067017,
-            "meningitis": 0.12790000438690186,
-            "tuberculosis": 0.11509999632835388
+            "cardiac_event": 0.10589999705553055,
+            "common_cold": 0.1266999989748001,
+            "covid19": 0.13040000200271606,
+            "dengue": 0.1096000000834465,
+            "diabetes": 0.11569999903440475,
+            "flu": 0.16179999709129333,
+            "meningitis": 0.12839999794960022,
+            "tuberculosis": 0.12139999866485596
           },
-          "summary": "DNN: common_cold (13.29%)"
+          "summary": "DNN: flu (16.18%)"
         },
         "Fuzzy": {
           "severity_score": 63.43,
