@@ -116,6 +116,6 @@ class FuzzySeverityAssessor:
         )
         result['summary']   = (f"Severity: {result['severity_label']} "
                                f"({result['severity_score']:.1f}/100)")
-        result['diagnosis'] = result['severity_label']
+        result['diagnosis'] = None
         result['confidence']= result['severity_score'] / 100
         return result

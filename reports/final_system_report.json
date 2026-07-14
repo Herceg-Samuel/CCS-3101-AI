@@ -1,0 +1,1909 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "labels": [
+      "common_cold",
+      "diabetes",
+      "flu",
+      "tuberculosis"
+    ],
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "classification_report": {
+      "common_cold": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "diabetes": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "flu": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "tuberculosis": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      }
+    },
+    "roc_auc": "not_applicable_for_multiclass_label_output"
+  },
+  "reports": [
+    {
+      "patient_id": "DEMO-001",
+      "timestamp": "2026-07-11T11:26:49.028047",
+      "symptoms": [
+        "body_aches",
+        "fatigue",
+        "fever",
+        "headache",
+        "shortness_of_breath"
+      ],
+      "expected_diagnosis": "flu",
+      "diagnosis": "flu",
+      "confidence": 0.624,
+      "urgency": "HIGH",
+      "severity": {
+        "severity_score": 63.43,
+        "severity_label": "HIGH",
+        "rule_strengths": {
+          "critical": 0.067,
+          "high": 0.2,
+          "moderate": 0.5,
+          "mild": 0,
+          "low": 0
+        },
+        "memberships": {
+          "temperature": {
+            "normal": 0,
+            "mild": 0,
+            "high": 0.8999999999999986,
+            "critical": 0.06666666666666761
+          },
+          "heart_rate": {
+            "low": 0,
+            "normal": 0,
+            "elevated": 0.19999999999999996,
+            "high": 0.6
+          },
+          "symptoms": {
+            "few": 0,
+            "moderate": 0.5,
+            "many": 0
+          }
+        },
+        "summary": "Severity: HIGH (63.4/100)",
+        "diagnosis": null,
+        "confidence": 0.6343
+      },
+      "module_results": {
+        "KnowledgeBase": {
+          "summary": "Inferred 1 conclusions; best CSV match: flu",
+          "diagnosis": "flu_suspected",
+          "confidence": 0.994,
+          "all_inferred": {
+            "flu_suspected": 0.651
+          },
+          "csv_scores": {
+            "flu": 0.994,
+            "common_cold": 0.0042,
+            "eczema": 0.0,
+            "asthma": 0.0004,
+            "hyperthyroidism": 0.0,
+            "allergic_rhinitis": 0.0,
+            "anxiety_disorders": 0.0,
+            "diabetes": 0.0,
+            "gastroenteritis": 0.0,
+            "pancreatitis": 0.0,
+            "rheumatoid_arthritis": 0.0,
+            "depression": 0.0,
+            "liver_cancer": 0.0001,
+            "stroke": 0.0001,
+            "urinary_tract_infection": 0.0,
+            "dengue_fever": 0.0,
+            "hepatitis": 0.0,
+            "kidney_cancer": 0.0,
+            "migraine": 0.0,
+            "muscular_dystrophy": 0.0,
+            "sinusitis": 0.0,
+            "ulcerative_colitis": 0.0,
+            "bipolar_disorder": 0.0,
+            "bronchitis": 0.0002,
+            "cerebral_palsy": 0.0,
+            "colorectal_cancer": 0.0,
+            "hypertensive_heart_disease": 0.0,
+            "multiple_sclerosis": 0.0,
+            "myocardial_infarction_(heart...": 0.0,
+            "urinary_tract_infection_(uti)": 0.0,
+            "osteoporosis": 0.0,
+            "pneumonia": 0.0002,
+            "atherosclerosis": 0.0,
+            "chronic_obstructive_pulmonary...": 0.0,
+            "epilepsy": 0.0,
+            "hypertension": 0.0,
+            "obsessive_compulsive_disorde...": 0.0,
+            "psoriasis": 0.0,
+            "rubella": 0.0,
+            "cirrhosis": 0.0,
+            "conjunctivitis_(pink_eye)": 0.0,
+            "liver_disease": 0.0,
+            "malaria": 0.0,
+            "spina_bifida": 0.0,
+            "kidney_disease": 0.0,
+            "osteoarthritis": 0.0,
+            "klinefelter_syndrome": 0.0,
+            "acne": 0.0,
+            "brain_tumor": 0.0,
+            "cystic_fibrosis": 0.0,
+            "glaucoma": 0.0,
+            "rabies": 0.0,
+            "chickenpox": 0.0,
+            "coronary_artery_disease": 0.0,
+            "eating_disorders_(anorexia,...": 0.0,
+            "fibromyalgia": 0.0,
+            "hemophilia": 0.0,
+            "hypoglycemia": 0.0,
+            "lymphoma": 0.0,
+            "tuberculosis": 0.0001,
+            "lung_cancer": 0.0,
+            "hypothyroidism": 0.0,
+            "autism_spectrum_disorder_(asd)": 0.0,
+            "crohn's_disease": 0.0,
+            "hyperglycemia": 0.0,
+            "melanoma": 0.0,
+            "ovarian_cancer": 0.0,
+            "turner_syndrome": 0.0,
+            "zika_virus": 0.0,
+            "cataracts": 0.0,
+            "pneumocystis_pneumonia_(pcp)": 0.0,
+            "sickle_cell_anemia": 0.0,
+            "tetanus": 0.0,
+            "anemia": 0.0,
+            "cholera": 0.0001,
+            "endometriosis": 0.0,
+            "sepsis": 0.0,
+            "sleep_apnea": 0.0,
+            "down_syndrome": 0.0,
+            "ebola_virus": 0.0001,
+            "lyme_disease": 0.0,
+            "pancreatic_cancer": 0.0,
+            "pneumothorax": 0.0,
+            "appendicitis": 0.0,
+            "esophageal_cancer": 0.0,
+            "hiv/aids": 0.0,
+            "marfan_syndrome": 0.0,
+            "parkinson's_disease": 0.0,
+            "polycystic_ovary_syndrome_(pcos)": 0.0,
+            "systemic_lupus_erythematosus...": 0.0,
+            "typhoid_fever": 0.0,
+            "breast_cancer": 0.0,
+            "measles": 0.0,
+            "osteomyelitis": 0.0,
+            "polio": 0.0,
+            "chronic_kidney_disease": 0.0,
+            "hepatitis_b": 0.0,
+            "prader_willi_syndrome": 0.0,
+            "thyroid_cancer": 0.0,
+            "bladder_cancer": 0.0,
+            "otitis_media_(ear_infection)": 0.0,
+            "tourette_syndrome": 0.0,
+            "alzheimer's_disease": 0.0,
+            "chronic_obstructive_pulmonary_disease_(copd)": 0.0001,
+            "dementia": 0.0,
+            "diverticulitis": 0.0,
+            "mumps": 0.0,
+            "cholecystitis": 0.0,
+            "prostate_cancer": 0.0,
+            "schizophrenia": 0.0,
+            "gout": 0.0,
+            "testicular_cancer": 0.0,
+            "tonsillitis": 0.0,
+            "williams_syndrome": 0.0
+          }
+        },
+        "BayesianNet": {
+          "summary": "Top: flu (45.01%)",
+          "diagnosis": "flu",
+          "confidence": 0.4501,
+          "all_posteriors": {
+            "flu": 0.4501,
+            "covid19": 0.1672,
+            "dengue": 0.21,
+            "cardiac": 0.005,
+            "diabetes": 0.0002,
+            "common_cold": 0.1674,
+            "healthy": 0.0
+          },
+          "ranked_diagnoses": [
+            [
+              "flu",
+              0.4501
+            ],
+            [
+              "dengue",
+              0.21
+            ],
+            [
+              "common_cold",
+              0.1674
+            ],
+            [
+              "covid19",
+              0.1672
+            ],
+            [
+              "cardiac",
+              0.005
+            ]
+          ]
+        },
+        "MLClassifier": {
+          "diagnosis": "flu",
+          "confidence": 0.89,
+          "top5": [
+            [
+              "flu",
+              0.89
+            ],
+            [
+              "common_cold",
+              0.1
+            ],
+            [
+              "covid19",
+              0.01
+            ],
+            [
+              "cardiac_event",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ]
+          ],
+          "model_used": "Random Forest",
+          "symptom_vector": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "summary": "Random Forest: flu (89.00%)"
+        },
+        "NeuralNetwork": {
+          "diagnosis": "flu",
+          "confidence": 0.1618,
+          "all_probs": {
+            "cardiac_event": 0.10589999705553055,
+            "common_cold": 0.1266999989748001,
+            "covid19": 0.13040000200271606,
+            "dengue": 0.1096000000834465,
+            "diabetes": 0.11569999903440475,
+            "flu": 0.16179999709129333,
+            "meningitis": 0.12839999794960022,
+            "tuberculosis": 0.12139999866485596
+          },
+          "summary": "DNN: flu (16.18%)"
+        },
+        "Fuzzy": {
+          "severity_score": 63.43,
+          "severity_label": "HIGH",
+          "rule_strengths": {
+            "critical": 0.067,
+            "high": 0.2,
+            "moderate": 0.5,
+            "mild": 0,
+            "low": 0
+          },
+          "memberships": {
+            "temperature": {
+              "normal": 0,
+              "mild": 0,
+              "high": 0.8999999999999986,
+              "critical": 0.06666666666666761
+            },
+            "heart_rate": {
+              "low": 0,
+              "normal": 0,
+              "elevated": 0.19999999999999996,
+              "high": 0.6
+            },
+            "symptoms": {
+              "few": 0,
+              "moderate": 0.5,
+              "many": 0
+            }
+          },
+          "summary": "Severity: HIGH (63.4/100)",
+          "diagnosis": null,
+          "confidence": 0.6343
+        }
+      },
+      "recommendations": [
+        "Schedule urgent appointment within 24 hours",
+        "Order blood panel and cultures",
+        "Prescribe symptomatic relief",
+        "Monitor vitals every 2 hours"
+      ],
+      "next_action": "URGENT_APPOINTMENT",
+      "treatment_plan": {
+        "diagnosis": "flu",
+        "urgency": "HIGH",
+        "initial_state": [
+          "DIAGNOSIS_NEEDED",
+          "PATIENT_PRESENT",
+          "VIRAL_INFECTION"
+        ],
+        "goal_state": [
+          "FOLLOWUP_SCHEDULED",
+          "TREATMENT_STARTED",
+          "VITALS_MONITORED"
+        ],
+        "steps": 5,
+        "total_duration": "5 actions | see individual durations",
+        "plan": [
+          {
+            "step": 1,
+            "action": "OrderBloodPanel",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 2,
+            "action": "ReceiveBloodResults",
+            "duration": "2 hours",
+            "cost": 0
+          },
+          {
+            "step": 3,
+            "action": "PrescribeAntiviral",
+            "duration": "10 minutes",
+            "cost": 1
+          },
+          {
+            "step": 4,
+            "action": "MonitorVitals",
+            "duration": "Continuous",
+            "cost": 0
+          },
+          {
+            "step": 5,
+            "action": "ScheduleFollowUp",
+            "duration": "5 minutes",
+            "cost": 0
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": "DEMO-002",
+      "timestamp": "2026-07-11T11:26:49.028047",
+      "symptoms": [
+        "cough",
+        "fatigue",
+        "headache"
+      ],
+      "expected_diagnosis": "common_cold",
+      "diagnosis": "common_cold",
+      "confidence": 0.534,
+      "urgency": "LOW",
+      "severity": {
+        "severity_score": 35.0,
+        "severity_label": "MILD",
+        "rule_strengths": {
+          "critical": 0,
+          "high": 0,
+          "moderate": 0,
+          "mild": 0.5,
+          "low": 0
+        },
+        "memberships": {
+          "temperature": {
+            "normal": 0.5,
+            "mild": 0,
+            "high": 0,
+            "critical": 0
+          },
+          "heart_rate": {
+            "low": 0,
+            "normal": 0.9,
+            "elevated": 0,
+            "high": 0
+          },
+          "symptoms": {
+            "few": 0,
+            "moderate": 0.5,
+            "many": 0
+          }
+        },
+        "summary": "Severity: MILD (35.0/100)",
+        "diagnosis": null,
+        "confidence": 0.35
+      },
+      "module_results": {
+        "KnowledgeBase": {
+          "summary": "Inferred 0 conclusions; best CSV match: flu",
+          "diagnosis": "flu",
+          "confidence": 0.5725,
+          "all_inferred": {},
+          "csv_scores": {
+            "flu": 0.5725,
+            "common_cold": 0.2761,
+            "eczema": 0.0024,
+            "asthma": 0.012,
+            "hyperthyroidism": 0.0051,
+            "allergic_rhinitis": 0.0039,
+            "anxiety_disorders": 0.0025,
+            "diabetes": 0.0046,
+            "gastroenteritis": 0.0039,
+            "pancreatitis": 0.0028,
+            "rheumatoid_arthritis": 0.0032,
+            "depression": 0.0024,
+            "liver_cancer": 0.0047,
+            "stroke": 0.0074,
+            "urinary_tract_infection": 0.0028,
+            "dengue_fever": 0.0,
+            "hepatitis": 0.0018,
+            "kidney_cancer": 0.0032,
+            "migraine": 0.004,
+            "muscular_dystrophy": 0.0,
+            "sinusitis": 0.0013,
+            "ulcerative_colitis": 0.0028,
+            "bipolar_disorder": 0.0,
+            "bronchitis": 0.0064,
+            "cerebral_palsy": 0.0,
+            "colorectal_cancer": 0.0,
+            "hypertensive_heart_disease": 0.0,
+            "multiple_sclerosis": 0.0021,
+            "myocardial_infarction_(heart...": 0.0013,
+            "urinary_tract_infection_(uti)": 0.0014,
+            "osteoporosis": 0.0053,
+            "pneumonia": 0.0083,
+            "atherosclerosis": 0.0,
+            "chronic_obstructive_pulmonary...": 0.0013,
+            "epilepsy": 0.0,
+            "hypertension": 0.0033,
+            "obsessive_compulsive_disorde...": 0.0,
+            "psoriasis": 0.0021,
+            "rubella": 0.0,
+            "cirrhosis": 0.0,
+            "conjunctivitis_(pink_eye)": 0.0,
+            "liver_disease": 0.0028,
+            "malaria": 0.0,
+            "spina_bifida": 0.0,
+            "kidney_disease": 0.0028,
+            "osteoarthritis": 0.0032,
+            "klinefelter_syndrome": 0.0,
+            "acne": 0.0,
+            "brain_tumor": 0.0,
+            "cystic_fibrosis": 0.0,
+            "glaucoma": 0.0,
+            "rabies": 0.0,
+            "chickenpox": 0.0,
+            "coronary_artery_disease": 0.0021,
+            "eating_disorders_(anorexia,...": 0.0,
+            "fibromyalgia": 0.0,
+            "hemophilia": 0.0,
+            "hypoglycemia": 0.0,
+            "lymphoma": 0.0,
+            "tuberculosis": 0.0037,
+            "lung_cancer": 0.0018,
+            "hypothyroidism": 0.0046,
+            "autism_spectrum_disorder_(asd)": 0.0,
+            "crohn's_disease": 0.0032,
+            "hyperglycemia": 0.0,
+            "melanoma": 0.0,
+            "ovarian_cancer": 0.0,
+            "turner_syndrome": 0.0,
+            "zika_virus": 0.0024,
+            "cataracts": 0.0,
+            "pneumocystis_pneumonia_(pcp)": 0.0013,
+            "sickle_cell_anemia": 0.0,
+            "tetanus": 0.0,
+            "anemia": 0.0,
+            "cholera": 0.0,
+            "endometriosis": 0.0,
+            "sepsis": 0.0013,
+            "sleep_apnea": 0.0,
+            "down_syndrome": 0.0,
+            "ebola_virus": 0.0024,
+            "lyme_disease": 0.0,
+            "pancreatic_cancer": 0.0,
+            "pneumothorax": 0.0,
+            "appendicitis": 0.0,
+            "esophageal_cancer": 0.0,
+            "hiv/aids": 0.0,
+            "marfan_syndrome": 0.0,
+            "parkinson's_disease": 0.0021,
+            "polycystic_ovary_syndrome_(pcos)": 0.0,
+            "systemic_lupus_erythematosus...": 0.0013,
+            "typhoid_fever": 0.0,
+            "breast_cancer": 0.0,
+            "measles": 0.0,
+            "osteomyelitis": 0.0,
+            "polio": 0.0013,
+            "chronic_kidney_disease": 0.0,
+            "hepatitis_b": 0.0024,
+            "prader_willi_syndrome": 0.0,
+            "thyroid_cancer": 0.0,
+            "bladder_cancer": 0.0,
+            "otitis_media_(ear_infection)": 0.0013,
+            "tourette_syndrome": 0.0,
+            "alzheimer's_disease": 0.0021,
+            "chronic_obstructive_pulmonary_disease_(copd)": 0.003,
+            "dementia": 0.0,
+            "diverticulitis": 0.0,
+            "mumps": 0.0,
+            "cholecystitis": 0.0,
+            "prostate_cancer": 0.0,
+            "schizophrenia": 0.0013,
+            "gout": 0.0,
+            "testicular_cancer": 0.0,
+            "tonsillitis": 0.0013,
+            "williams_syndrome": 0.0
+          }
+        },
+        "BayesianNet": {
+          "summary": "Top: common_cold (41.73%)",
+          "diagnosis": "common_cold",
+          "confidence": 0.4173,
+          "all_posteriors": {
+            "flu": 0.3679,
+            "covid19": 0.1754,
+            "dengue": 0.0253,
+            "cardiac": 0.0059,
+            "diabetes": 0.0077,
+            "common_cold": 0.4173,
+            "healthy": 0.0005
+          },
+          "ranked_diagnoses": [
+            [
+              "common_cold",
+              0.4173
+            ],
+            [
+              "flu",
+              0.3679
+            ],
+            [
+              "covid19",
+              0.1754
+            ],
+            [
+              "dengue",
+              0.0253
+            ],
+            [
+              "diabetes",
+              0.0077
+            ]
+          ]
+        },
+        "MLClassifier": {
+          "diagnosis": "common_cold",
+          "confidence": 0.9945,
+          "top5": [
+            [
+              "common_cold",
+              0.9945
+            ],
+            [
+              "flu",
+              0.0055000000000000005
+            ],
+            [
+              "cardiac_event",
+              0.0
+            ],
+            [
+              "covid19",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ]
+          ],
+          "model_used": "Random Forest",
+          "symptom_vector": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "summary": "Random Forest: common_cold (99.45%)"
+        },
+        "NeuralNetwork": {
+          "diagnosis": "flu",
+          "confidence": 0.1524,
+          "all_probs": {
+            "cardiac_event": 0.11559999734163284,
+            "common_cold": 0.1363999992609024,
+            "covid19": 0.13449999690055847,
+            "dengue": 0.09130000323057175,
+            "diabetes": 0.13349999487400055,
+            "flu": 0.15240000188350677,
+            "meningitis": 0.1168999969959259,
+            "tuberculosis": 0.11959999799728394
+          },
+          "summary": "DNN: flu (15.24%)"
+        },
+        "Fuzzy": {
+          "severity_score": 35.0,
+          "severity_label": "MILD",
+          "rule_strengths": {
+            "critical": 0,
+            "high": 0,
+            "moderate": 0,
+            "mild": 0.5,
+            "low": 0
+          },
+          "memberships": {
+            "temperature": {
+              "normal": 0.5,
+              "mild": 0,
+              "high": 0,
+              "critical": 0
+            },
+            "heart_rate": {
+              "low": 0,
+              "normal": 0.9,
+              "elevated": 0,
+              "high": 0
+            },
+            "symptoms": {
+              "few": 0,
+              "moderate": 0.5,
+              "many": 0
+            }
+          },
+          "summary": "Severity: MILD (35.0/100)",
+          "diagnosis": null,
+          "confidence": 0.35
+        }
+      },
+      "recommendations": [
+        "Home rest recommended",
+        "Stay hydrated",
+        "Follow up if symptoms worsen",
+        "General wellness monitoring"
+      ],
+      "next_action": "MONITOR_AT_HOME",
+      "treatment_plan": {
+        "diagnosis": "common_cold",
+        "urgency": "LOW",
+        "initial_state": [
+          "DIAGNOSIS_NEEDED",
+          "PATIENT_PRESENT",
+          "VIRAL_INFECTION"
+        ],
+        "goal_state": [
+          "FOLLOWUP_SCHEDULED",
+          "TREATMENT_STARTED",
+          "VITALS_MONITORED"
+        ],
+        "steps": 5,
+        "total_duration": "5 actions | see individual durations",
+        "plan": [
+          {
+            "step": 1,
+            "action": "OrderBloodPanel",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 2,
+            "action": "ReceiveBloodResults",
+            "duration": "2 hours",
+            "cost": 0
+          },
+          {
+            "step": 3,
+            "action": "PrescribeAntiviral",
+            "duration": "10 minutes",
+            "cost": 1
+          },
+          {
+            "step": 4,
+            "action": "MonitorVitals",
+            "duration": "Continuous",
+            "cost": 0
+          },
+          {
+            "step": 5,
+            "action": "ScheduleFollowUp",
+            "duration": "5 minutes",
+            "cost": 0
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": "DEMO-003",
+      "timestamp": "2026-07-11T11:26:49.028047",
+      "symptoms": [
+        "blurred_vision",
+        "excessive_thirst",
+        "frequent_urination"
+      ],
+      "expected_diagnosis": "diabetes",
+      "diagnosis": "diabetes",
+      "confidence": 0.749,
+      "urgency": "LOW",
+      "severity": {
+        "severity_score": 35.0,
+        "severity_label": "MILD",
+        "rule_strengths": {
+          "critical": 0,
+          "high": 0,
+          "moderate": 0,
+          "mild": 0.5,
+          "low": 0
+        },
+        "memberships": {
+          "temperature": {
+            "normal": 0.5,
+            "mild": 0,
+            "high": 0,
+            "critical": 0
+          },
+          "heart_rate": {
+            "low": 0,
+            "normal": 0.9,
+            "elevated": 0,
+            "high": 0
+          },
+          "symptoms": {
+            "few": 0,
+            "moderate": 0.5,
+            "many": 0
+          }
+        },
+        "summary": "Severity: MILD (35.0/100)",
+        "diagnosis": null,
+        "confidence": 0.35
+      },
+      "module_results": {
+        "KnowledgeBase": {
+          "summary": "Inferred 0 conclusions; best CSV match: diabetes",
+          "diagnosis": "diabetes",
+          "confidence": 0.9999,
+          "all_inferred": {},
+          "csv_scores": {
+            "flu": 0.0,
+            "common_cold": 0.0,
+            "eczema": 0.0,
+            "asthma": 0.0,
+            "hyperthyroidism": 0.0,
+            "allergic_rhinitis": 0.0,
+            "anxiety_disorders": 0.0,
+            "diabetes": 0.9999,
+            "gastroenteritis": 0.0,
+            "pancreatitis": 0.0,
+            "rheumatoid_arthritis": 0.0,
+            "depression": 0.0,
+            "liver_cancer": 0.0,
+            "stroke": 0.0,
+            "urinary_tract_infection": 0.0,
+            "dengue_fever": 0.0,
+            "hepatitis": 0.0,
+            "kidney_cancer": 0.0,
+            "migraine": 0.0,
+            "muscular_dystrophy": 0.0,
+            "sinusitis": 0.0,
+            "ulcerative_colitis": 0.0,
+            "bipolar_disorder": 0.0,
+            "bronchitis": 0.0,
+            "cerebral_palsy": 0.0,
+            "colorectal_cancer": 0.0,
+            "hypertensive_heart_disease": 0.0,
+            "multiple_sclerosis": 0.0,
+            "myocardial_infarction_(heart...": 0.0,
+            "urinary_tract_infection_(uti)": 0.0,
+            "osteoporosis": 0.0,
+            "pneumonia": 0.0,
+            "atherosclerosis": 0.0,
+            "chronic_obstructive_pulmonary...": 0.0,
+            "epilepsy": 0.0,
+            "hypertension": 0.0,
+            "obsessive_compulsive_disorde...": 0.0,
+            "psoriasis": 0.0,
+            "rubella": 0.0,
+            "cirrhosis": 0.0,
+            "conjunctivitis_(pink_eye)": 0.0,
+            "liver_disease": 0.0,
+            "malaria": 0.0,
+            "spina_bifida": 0.0,
+            "kidney_disease": 0.0,
+            "osteoarthritis": 0.0,
+            "klinefelter_syndrome": 0.0,
+            "acne": 0.0,
+            "brain_tumor": 0.0,
+            "cystic_fibrosis": 0.0,
+            "glaucoma": 0.0,
+            "rabies": 0.0,
+            "chickenpox": 0.0,
+            "coronary_artery_disease": 0.0,
+            "eating_disorders_(anorexia,...": 0.0,
+            "fibromyalgia": 0.0,
+            "hemophilia": 0.0,
+            "hypoglycemia": 0.0,
+            "lymphoma": 0.0,
+            "tuberculosis": 0.0,
+            "lung_cancer": 0.0,
+            "hypothyroidism": 0.0,
+            "autism_spectrum_disorder_(asd)": 0.0,
+            "crohn's_disease": 0.0,
+            "hyperglycemia": 0.0,
+            "melanoma": 0.0,
+            "ovarian_cancer": 0.0,
+            "turner_syndrome": 0.0,
+            "zika_virus": 0.0,
+            "cataracts": 0.0,
+            "pneumocystis_pneumonia_(pcp)": 0.0,
+            "sickle_cell_anemia": 0.0,
+            "tetanus": 0.0,
+            "anemia": 0.0,
+            "cholera": 0.0,
+            "endometriosis": 0.0,
+            "sepsis": 0.0,
+            "sleep_apnea": 0.0,
+            "down_syndrome": 0.0,
+            "ebola_virus": 0.0,
+            "lyme_disease": 0.0,
+            "pancreatic_cancer": 0.0,
+            "pneumothorax": 0.0,
+            "appendicitis": 0.0,
+            "esophageal_cancer": 0.0,
+            "hiv/aids": 0.0,
+            "marfan_syndrome": 0.0,
+            "parkinson's_disease": 0.0,
+            "polycystic_ovary_syndrome_(pcos)": 0.0,
+            "systemic_lupus_erythematosus...": 0.0,
+            "typhoid_fever": 0.0,
+            "breast_cancer": 0.0,
+            "measles": 0.0,
+            "osteomyelitis": 0.0,
+            "polio": 0.0,
+            "chronic_kidney_disease": 0.0,
+            "hepatitis_b": 0.0,
+            "prader_willi_syndrome": 0.0,
+            "thyroid_cancer": 0.0,
+            "bladder_cancer": 0.0,
+            "otitis_media_(ear_infection)": 0.0,
+            "tourette_syndrome": 0.0,
+            "alzheimer's_disease": 0.0,
+            "chronic_obstructive_pulmonary_disease_(copd)": 0.0,
+            "dementia": 0.0,
+            "diverticulitis": 0.0,
+            "mumps": 0.0,
+            "cholecystitis": 0.0,
+            "prostate_cancer": 0.0,
+            "schizophrenia": 0.0,
+            "gout": 0.0,
+            "testicular_cancer": 0.0,
+            "tonsillitis": 0.0,
+            "williams_syndrome": 0.0
+          }
+        },
+        "BayesianNet": {
+          "summary": "Top: diabetes (100.00%)",
+          "diagnosis": "diabetes",
+          "confidence": 1.0,
+          "all_posteriors": {
+            "flu": 0.0,
+            "covid19": 0.0,
+            "dengue": 0.0,
+            "cardiac": 0.0,
+            "diabetes": 1.0,
+            "common_cold": 0.0,
+            "healthy": 0.0
+          },
+          "ranked_diagnoses": [
+            [
+              "diabetes",
+              1.0
+            ],
+            [
+              "flu",
+              0.0
+            ],
+            [
+              "covid19",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ],
+            [
+              "cardiac",
+              0.0
+            ]
+          ]
+        },
+        "MLClassifier": {
+          "diagnosis": "diabetes",
+          "confidence": 0.8171,
+          "top5": [
+            [
+              "diabetes",
+              0.8171384374579678
+            ],
+            [
+              "cardiac_event",
+              0.18286156254203204
+            ],
+            [
+              "common_cold",
+              0.0
+            ],
+            [
+              "covid19",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ]
+          ],
+          "model_used": "Random Forest",
+          "symptom_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "summary": "Random Forest: diabetes (81.71%)"
+        },
+        "NeuralNetwork": {
+          "diagnosis": "diabetes",
+          "confidence": 0.1799,
+          "all_probs": {
+            "cardiac_event": 0.15449999272823334,
+            "common_cold": 0.14079999923706055,
+            "covid19": 0.10480000078678131,
+            "dengue": 0.0908999964594841,
+            "diabetes": 0.17990000545978546,
+            "flu": 0.10350000113248825,
+            "meningitis": 0.1103999987244606,
+            "tuberculosis": 0.1151999980211258
+          },
+          "summary": "DNN: diabetes (17.99%)"
+        },
+        "Fuzzy": {
+          "severity_score": 35.0,
+          "severity_label": "MILD",
+          "rule_strengths": {
+            "critical": 0,
+            "high": 0,
+            "moderate": 0,
+            "mild": 0.5,
+            "low": 0
+          },
+          "memberships": {
+            "temperature": {
+              "normal": 0.5,
+              "mild": 0,
+              "high": 0,
+              "critical": 0
+            },
+            "heart_rate": {
+              "low": 0,
+              "normal": 0.9,
+              "elevated": 0,
+              "high": 0
+            },
+            "symptoms": {
+              "few": 0,
+              "moderate": 0.5,
+              "many": 0
+            }
+          },
+          "summary": "Severity: MILD (35.0/100)",
+          "diagnosis": null,
+          "confidence": 0.35
+        }
+      },
+      "recommendations": [
+        "Home rest recommended",
+        "Stay hydrated",
+        "Follow up if symptoms worsen",
+        "General wellness monitoring"
+      ],
+      "next_action": "MONITOR_AT_HOME",
+      "treatment_plan": {
+        "diagnosis": "diabetes",
+        "urgency": "LOW",
+        "initial_state": [
+          "DIAGNOSIS_NEEDED",
+          "ENDOCRINE_CONDITION",
+          "PATIENT_PRESENT"
+        ],
+        "goal_state": [
+          "FOLLOWUP_SCHEDULED",
+          "TREATMENT_STARTED",
+          "VITALS_MONITORED"
+        ],
+        "steps": 5,
+        "total_duration": "5 actions | see individual durations",
+        "plan": [
+          {
+            "step": 1,
+            "action": "OrderBloodPanel",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 2,
+            "action": "ReceiveBloodResults",
+            "duration": "2 hours",
+            "cost": 0
+          },
+          {
+            "step": 3,
+            "action": "StartDiabetesManagement",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 4,
+            "action": "MonitorVitals",
+            "duration": "Continuous",
+            "cost": 0
+          },
+          {
+            "step": 5,
+            "action": "ScheduleFollowUp",
+            "duration": "5 minutes",
+            "cost": 0
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": "DEMO-004",
+      "timestamp": "2026-07-11T11:26:49.028047",
+      "symptoms": [
+        "cough",
+        "fatigue",
+        "fever",
+        "night_sweats",
+        "shortness_of_breath",
+        "weight_loss"
+      ],
+      "expected_diagnosis": "tuberculosis",
+      "diagnosis": "tuberculosis",
+      "confidence": 0.623,
+      "urgency": "HIGH",
+      "severity": {
+        "severity_score": 77.83,
+        "severity_label": "HIGH",
+        "rule_strengths": {
+          "critical": 0.067,
+          "high": 0.333,
+          "moderate": 0,
+          "mild": 0,
+          "low": 0
+        },
+        "memberships": {
+          "temperature": {
+            "normal": 0,
+            "mild": 0,
+            "high": 0.8999999999999986,
+            "critical": 0.06666666666666761
+          },
+          "heart_rate": {
+            "low": 0,
+            "normal": 0,
+            "elevated": 0.19999999999999996,
+            "high": 0.6
+          },
+          "symptoms": {
+            "few": 0,
+            "moderate": 0,
+            "many": 0.3333333333333333
+          }
+        },
+        "summary": "Severity: HIGH (77.8/100)",
+        "diagnosis": null,
+        "confidence": 0.7783
+      },
+      "module_results": {
+        "KnowledgeBase": {
+          "summary": "Inferred 29 conclusions; best CSV match: tuberculosis",
+          "diagnosis": "tuberculosis",
+          "confidence": 0.9969,
+          "all_inferred": {
+            "asthma_suspected": 0.651,
+            "anxiety_disorders_suspected": 0.651,
+            "gastroenteritis_suspected": 0.651,
+            "pancreatitis_suspected": 0.651,
+            "rheumatoid_arthritis_suspected": 0.651,
+            "depression_suspected": 0.651,
+            "liver_cancer_suspected": 0.651,
+            "stroke_suspected": 0.651,
+            "urinary_tract_infection_suspected": 0.651,
+            "hepatitis_suspected": 0.651,
+            "kidney_cancer_suspected": 0.651,
+            "migraine_suspected": 0.651,
+            "bronchitis_suspected": 0.651,
+            "cerebral_palsy_suspected": 0.651,
+            "myocardial_infarction_(heart..._suspected": 0.651,
+            "osteoporosis_suspected": 0.651,
+            "pneumonia_suspected": 0.651,
+            "chronic_obstructive_pulmonary..._suspected": 0.651,
+            "liver_disease_suspected": 0.651,
+            "kidney_disease_suspected": 0.651,
+            "osteoarthritis_suspected": 0.651,
+            "cystic_fibrosis_suspected": 0.651,
+            "tuberculosis_suspected": 0.651,
+            "lung_cancer_suspected": 0.651,
+            "cholera_suspected": 0.651,
+            "sleep_apnea_suspected": 0.651,
+            "ebola_virus_suspected": 0.651,
+            "pneumothorax_suspected": 0.651,
+            "chronic_obstructive_pulmonary_disease_(copd)_suspected": 0.651
+          },
+          "csv_scores": {
+            "flu": 0.0002,
+            "common_cold": 0.0001,
+            "eczema": 0.0,
+            "asthma": 0.0007,
+            "hyperthyroidism": 0.0,
+            "allergic_rhinitis": 0.0,
+            "anxiety_disorders": 0.0,
+            "diabetes": 0.0,
+            "gastroenteritis": 0.0001,
+            "pancreatitis": 0.0,
+            "rheumatoid_arthritis": 0.0,
+            "depression": 0.0,
+            "liver_cancer": 0.0001,
+            "stroke": 0.0001,
+            "urinary_tract_infection": 0.0001,
+            "dengue_fever": 0.0,
+            "hepatitis": 0.0001,
+            "kidney_cancer": 0.0,
+            "migraine": 0.0,
+            "muscular_dystrophy": 0.0,
+            "sinusitis": 0.0,
+            "ulcerative_colitis": 0.0,
+            "bipolar_disorder": 0.0,
+            "bronchitis": 0.0004,
+            "cerebral_palsy": 0.0,
+            "colorectal_cancer": 0.0,
+            "hypertensive_heart_disease": 0.0,
+            "multiple_sclerosis": 0.0,
+            "myocardial_infarction_(heart...": 0.0001,
+            "urinary_tract_infection_(uti)": 0.0,
+            "osteoporosis": 0.0,
+            "pneumonia": 0.0005,
+            "atherosclerosis": 0.0,
+            "chronic_obstructive_pulmonary...": 0.0001,
+            "epilepsy": 0.0,
+            "hypertension": 0.0,
+            "obsessive_compulsive_disorde...": 0.0,
+            "psoriasis": 0.0,
+            "rubella": 0.0,
+            "cirrhosis": 0.0,
+            "conjunctivitis_(pink_eye)": 0.0,
+            "liver_disease": 0.0,
+            "malaria": 0.0,
+            "spina_bifida": 0.0,
+            "kidney_disease": 0.0001,
+            "osteoarthritis": 0.0001,
+            "klinefelter_syndrome": 0.0,
+            "acne": 0.0,
+            "brain_tumor": 0.0,
+            "cystic_fibrosis": 0.0,
+            "glaucoma": 0.0,
+            "rabies": 0.0,
+            "chickenpox": 0.0,
+            "coronary_artery_disease": 0.0,
+            "eating_disorders_(anorexia,...": 0.0,
+            "fibromyalgia": 0.0,
+            "hemophilia": 0.0,
+            "hypoglycemia": 0.0,
+            "lymphoma": 0.0,
+            "tuberculosis": 0.9969,
+            "lung_cancer": 0.0001,
+            "hypothyroidism": 0.0,
+            "autism_spectrum_disorder_(asd)": 0.0,
+            "crohn's_disease": 0.0,
+            "hyperglycemia": 0.0,
+            "melanoma": 0.0,
+            "ovarian_cancer": 0.0,
+            "turner_syndrome": 0.0,
+            "zika_virus": 0.0,
+            "cataracts": 0.0,
+            "pneumocystis_pneumonia_(pcp)": 0.0,
+            "sickle_cell_anemia": 0.0,
+            "tetanus": 0.0,
+            "anemia": 0.0,
+            "cholera": 0.0,
+            "endometriosis": 0.0,
+            "sepsis": 0.0,
+            "sleep_apnea": 0.0,
+            "down_syndrome": 0.0,
+            "ebola_virus": 0.0001,
+            "lyme_disease": 0.0,
+            "pancreatic_cancer": 0.0,
+            "pneumothorax": 0.0,
+            "appendicitis": 0.0,
+            "esophageal_cancer": 0.0,
+            "hiv/aids": 0.0,
+            "marfan_syndrome": 0.0,
+            "parkinson's_disease": 0.0,
+            "polycystic_ovary_syndrome_(pcos)": 0.0,
+            "systemic_lupus_erythematosus...": 0.0,
+            "typhoid_fever": 0.0,
+            "breast_cancer": 0.0,
+            "measles": 0.0,
+            "osteomyelitis": 0.0,
+            "polio": 0.0,
+            "chronic_kidney_disease": 0.0,
+            "hepatitis_b": 0.0,
+            "prader_willi_syndrome": 0.0,
+            "thyroid_cancer": 0.0,
+            "bladder_cancer": 0.0,
+            "otitis_media_(ear_infection)": 0.0,
+            "tourette_syndrome": 0.0,
+            "alzheimer's_disease": 0.0,
+            "chronic_obstructive_pulmonary_disease_(copd)": 0.0001,
+            "dementia": 0.0,
+            "diverticulitis": 0.0,
+            "mumps": 0.0,
+            "cholecystitis": 0.0,
+            "prostate_cancer": 0.0,
+            "schizophrenia": 0.0,
+            "gout": 0.0,
+            "testicular_cancer": 0.0,
+            "tonsillitis": 0.0,
+            "williams_syndrome": 0.0
+          }
+        },
+        "BayesianNet": {
+          "summary": "Top: flu (37.51%)",
+          "diagnosis": "flu",
+          "confidence": 0.3751,
+          "all_posteriors": {
+            "flu": 0.3751,
+            "covid19": 0.1883,
+            "dengue": 0.0218,
+            "cardiac": 0.1373,
+            "diabetes": 0.0015,
+            "common_cold": 0.2758,
+            "healthy": 0.0001
+          },
+          "ranked_diagnoses": [
+            [
+              "flu",
+              0.3751
+            ],
+            [
+              "common_cold",
+              0.2758
+            ],
+            [
+              "covid19",
+              0.1883
+            ],
+            [
+              "cardiac",
+              0.1373
+            ],
+            [
+              "dengue",
+              0.0218
+            ]
+          ]
+        },
+        "MLClassifier": {
+          "diagnosis": "tuberculosis",
+          "confidence": 0.97,
+          "top5": [
+            [
+              "tuberculosis",
+              0.97
+            ],
+            [
+              "covid19",
+              0.03
+            ],
+            [
+              "cardiac_event",
+              0.0
+            ],
+            [
+              "common_cold",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ]
+          ],
+          "model_used": "Random Forest",
+          "symptom_vector": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "summary": "Random Forest: tuberculosis (97.00%)"
+        },
+        "NeuralNetwork": {
+          "diagnosis": "covid19",
+          "confidence": 0.1506,
+          "all_probs": {
+            "cardiac_event": 0.1152999997138977,
+            "common_cold": 0.12680000066757202,
+            "covid19": 0.15060000121593475,
+            "dengue": 0.10119999945163727,
+            "diabetes": 0.14000000059604645,
+            "flu": 0.12409999966621399,
+            "meningitis": 0.11089999973773956,
+            "tuberculosis": 0.13120000064373016
+          },
+          "summary": "DNN: covid19 (15.06%)"
+        },
+        "Fuzzy": {
+          "severity_score": 77.83,
+          "severity_label": "HIGH",
+          "rule_strengths": {
+            "critical": 0.067,
+            "high": 0.333,
+            "moderate": 0,
+            "mild": 0,
+            "low": 0
+          },
+          "memberships": {
+            "temperature": {
+              "normal": 0,
+              "mild": 0,
+              "high": 0.8999999999999986,
+              "critical": 0.06666666666666761
+            },
+            "heart_rate": {
+              "low": 0,
+              "normal": 0,
+              "elevated": 0.19999999999999996,
+              "high": 0.6
+            },
+            "symptoms": {
+              "few": 0,
+              "moderate": 0,
+              "many": 0.3333333333333333
+            }
+          },
+          "summary": "Severity: HIGH (77.8/100)",
+          "diagnosis": null,
+          "confidence": 0.7783
+        }
+      },
+      "recommendations": [
+        "Schedule urgent appointment within 24 hours",
+        "Order blood panel and cultures",
+        "Prescribe symptomatic relief",
+        "Monitor vitals every 2 hours"
+      ],
+      "next_action": "URGENT_APPOINTMENT",
+      "treatment_plan": {
+        "diagnosis": "tuberculosis",
+        "urgency": "HIGH",
+        "initial_state": [
+          "BACTERIAL_INFECTION",
+          "CONTAGIOUS_DISEASE",
+          "DIAGNOSIS_NEEDED",
+          "PATIENT_PRESENT"
+        ],
+        "goal_state": [
+          "FOLLOWUP_SCHEDULED",
+          "TREATMENT_STARTED",
+          "VITALS_MONITORED"
+        ],
+        "steps": 5,
+        "total_duration": "5 actions | see individual durations",
+        "plan": [
+          {
+            "step": 1,
+            "action": "OrderBloodPanel",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 2,
+            "action": "ReceiveBloodResults",
+            "duration": "2 hours",
+            "cost": 0
+          },
+          {
+            "step": 3,
+            "action": "PrescribeAntibiotics",
+            "duration": "10 minutes",
+            "cost": 1
+          },
+          {
+            "step": 4,
+            "action": "MonitorVitals",
+            "duration": "Continuous",
+            "cost": 0
+          },
+          {
+            "step": 5,
+            "action": "ScheduleFollowUp",
+            "duration": "5 minutes",
+            "cost": 0
+          }
+        ]
+      }
+    },
+    {
+      "patient_id": "DEMO-005",
+      "timestamp": "2026-07-11T11:26:49.028047",
+      "symptoms": [
+        "body_aches",
+        "fatigue",
+        "fever",
+        "headache",
+        "shortness_of_breath"
+      ],
+      "expected_diagnosis": "flu",
+      "diagnosis": "flu",
+      "confidence": 0.624,
+      "urgency": "HIGH",
+      "severity": {
+        "severity_score": 63.43,
+        "severity_label": "HIGH",
+        "rule_strengths": {
+          "critical": 0.067,
+          "high": 0.2,
+          "moderate": 0.5,
+          "mild": 0,
+          "low": 0
+        },
+        "memberships": {
+          "temperature": {
+            "normal": 0,
+            "mild": 0,
+            "high": 0.8999999999999986,
+            "critical": 0.06666666666666761
+          },
+          "heart_rate": {
+            "low": 0,
+            "normal": 0,
+            "elevated": 0.19999999999999996,
+            "high": 0.6
+          },
+          "symptoms": {
+            "few": 0,
+            "moderate": 0.5,
+            "many": 0
+          }
+        },
+        "summary": "Severity: HIGH (63.4/100)",
+        "diagnosis": null,
+        "confidence": 0.6343
+      },
+      "module_results": {
+        "KnowledgeBase": {
+          "summary": "Inferred 1 conclusions; best CSV match: flu",
+          "diagnosis": "flu_suspected",
+          "confidence": 0.994,
+          "all_inferred": {
+            "flu_suspected": 0.651
+          },
+          "csv_scores": {
+            "flu": 0.994,
+            "common_cold": 0.0042,
+            "eczema": 0.0,
+            "asthma": 0.0004,
+            "hyperthyroidism": 0.0,
+            "allergic_rhinitis": 0.0,
+            "anxiety_disorders": 0.0,
+            "diabetes": 0.0,
+            "gastroenteritis": 0.0,
+            "pancreatitis": 0.0,
+            "rheumatoid_arthritis": 0.0,
+            "depression": 0.0,
+            "liver_cancer": 0.0001,
+            "stroke": 0.0001,
+            "urinary_tract_infection": 0.0,
+            "dengue_fever": 0.0,
+            "hepatitis": 0.0,
+            "kidney_cancer": 0.0,
+            "migraine": 0.0,
+            "muscular_dystrophy": 0.0,
+            "sinusitis": 0.0,
+            "ulcerative_colitis": 0.0,
+            "bipolar_disorder": 0.0,
+            "bronchitis": 0.0002,
+            "cerebral_palsy": 0.0,
+            "colorectal_cancer": 0.0,
+            "hypertensive_heart_disease": 0.0,
+            "multiple_sclerosis": 0.0,
+            "myocardial_infarction_(heart...": 0.0,
+            "urinary_tract_infection_(uti)": 0.0,
+            "osteoporosis": 0.0,
+            "pneumonia": 0.0002,
+            "atherosclerosis": 0.0,
+            "chronic_obstructive_pulmonary...": 0.0,
+            "epilepsy": 0.0,
+            "hypertension": 0.0,
+            "obsessive_compulsive_disorde...": 0.0,
+            "psoriasis": 0.0,
+            "rubella": 0.0,
+            "cirrhosis": 0.0,
+            "conjunctivitis_(pink_eye)": 0.0,
+            "liver_disease": 0.0,
+            "malaria": 0.0,
+            "spina_bifida": 0.0,
+            "kidney_disease": 0.0,
+            "osteoarthritis": 0.0,
+            "klinefelter_syndrome": 0.0,
+            "acne": 0.0,
+            "brain_tumor": 0.0,
+            "cystic_fibrosis": 0.0,
+            "glaucoma": 0.0,
+            "rabies": 0.0,
+            "chickenpox": 0.0,
+            "coronary_artery_disease": 0.0,
+            "eating_disorders_(anorexia,...": 0.0,
+            "fibromyalgia": 0.0,
+            "hemophilia": 0.0,
+            "hypoglycemia": 0.0,
+            "lymphoma": 0.0,
+            "tuberculosis": 0.0001,
+            "lung_cancer": 0.0,
+            "hypothyroidism": 0.0,
+            "autism_spectrum_disorder_(asd)": 0.0,
+            "crohn's_disease": 0.0,
+            "hyperglycemia": 0.0,
+            "melanoma": 0.0,
+            "ovarian_cancer": 0.0,
+            "turner_syndrome": 0.0,
+            "zika_virus": 0.0,
+            "cataracts": 0.0,
+            "pneumocystis_pneumonia_(pcp)": 0.0,
+            "sickle_cell_anemia": 0.0,
+            "tetanus": 0.0,
+            "anemia": 0.0,
+            "cholera": 0.0001,
+            "endometriosis": 0.0,
+            "sepsis": 0.0,
+            "sleep_apnea": 0.0,
+            "down_syndrome": 0.0,
+            "ebola_virus": 0.0001,
+            "lyme_disease": 0.0,
+            "pancreatic_cancer": 0.0,
+            "pneumothorax": 0.0,
+            "appendicitis": 0.0,
+            "esophageal_cancer": 0.0,
+            "hiv/aids": 0.0,
+            "marfan_syndrome": 0.0,
+            "parkinson's_disease": 0.0,
+            "polycystic_ovary_syndrome_(pcos)": 0.0,
+            "systemic_lupus_erythematosus...": 0.0,
+            "typhoid_fever": 0.0,
+            "breast_cancer": 0.0,
+            "measles": 0.0,
+            "osteomyelitis": 0.0,
+            "polio": 0.0,
+            "chronic_kidney_disease": 0.0,
+            "hepatitis_b": 0.0,
+            "prader_willi_syndrome": 0.0,
+            "thyroid_cancer": 0.0,
+            "bladder_cancer": 0.0,
+            "otitis_media_(ear_infection)": 0.0,
+            "tourette_syndrome": 0.0,
+            "alzheimer's_disease": 0.0,
+            "chronic_obstructive_pulmonary_disease_(copd)": 0.0001,
+            "dementia": 0.0,
+            "diverticulitis": 0.0,
+            "mumps": 0.0,
+            "cholecystitis": 0.0,
+            "prostate_cancer": 0.0,
+            "schizophrenia": 0.0,
+            "gout": 0.0,
+            "testicular_cancer": 0.0,
+            "tonsillitis": 0.0,
+            "williams_syndrome": 0.0
+          }
+        },
+        "BayesianNet": {
+          "summary": "Top: flu (45.01%)",
+          "diagnosis": "flu",
+          "confidence": 0.4501,
+          "all_posteriors": {
+            "flu": 0.4501,
+            "covid19": 0.1672,
+            "dengue": 0.21,
+            "cardiac": 0.005,
+            "diabetes": 0.0002,
+            "common_cold": 0.1674,
+            "healthy": 0.0
+          },
+          "ranked_diagnoses": [
+            [
+              "flu",
+              0.4501
+            ],
+            [
+              "dengue",
+              0.21
+            ],
+            [
+              "common_cold",
+              0.1674
+            ],
+            [
+              "covid19",
+              0.1672
+            ],
+            [
+              "cardiac",
+              0.005
+            ]
+          ]
+        },
+        "MLClassifier": {
+          "diagnosis": "flu",
+          "confidence": 0.89,
+          "top5": [
+            [
+              "flu",
+              0.89
+            ],
+            [
+              "common_cold",
+              0.1
+            ],
+            [
+              "covid19",
+              0.01
+            ],
+            [
+              "cardiac_event",
+              0.0
+            ],
+            [
+              "dengue",
+              0.0
+            ]
+          ],
+          "model_used": "Random Forest",
+          "symptom_vector": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "summary": "Random Forest: flu (89.00%)"
+        },
+        "NeuralNetwork": {
+          "diagnosis": "flu",
+          "confidence": 0.1618,
+          "all_probs": {
+            "cardiac_event": 0.10589999705553055,
+            "common_cold": 0.1266999989748001,
+            "covid19": 0.13040000200271606,
+            "dengue": 0.1096000000834465,
+            "diabetes": 0.11569999903440475,
+            "flu": 0.16179999709129333,
+            "meningitis": 0.12839999794960022,
+            "tuberculosis": 0.12139999866485596
+          },
+          "summary": "DNN: flu (16.18%)"
+        },
+        "Fuzzy": {
+          "severity_score": 63.43,
+          "severity_label": "HIGH",
+          "rule_strengths": {
+            "critical": 0.067,
+            "high": 0.2,
+            "moderate": 0.5,
+            "mild": 0,
+            "low": 0
+          },
+          "memberships": {
+            "temperature": {
+              "normal": 0,
+              "mild": 0,
+              "high": 0.8999999999999986,
+              "critical": 0.06666666666666761
+            },
+            "heart_rate": {
+              "low": 0,
+              "normal": 0,
+              "elevated": 0.19999999999999996,
+              "high": 0.6
+            },
+            "symptoms": {
+              "few": 0,
+              "moderate": 0.5,
+              "many": 0
+            }
+          },
+          "summary": "Severity: HIGH (63.4/100)",
+          "diagnosis": null,
+          "confidence": 0.6343
+        }
+      },
+      "recommendations": [
+        "Schedule urgent appointment within 24 hours",
+        "Order blood panel and cultures",
+        "Prescribe symptomatic relief",
+        "Monitor vitals every 2 hours"
+      ],
+      "next_action": "URGENT_APPOINTMENT",
+      "treatment_plan": {
+        "diagnosis": "flu",
+        "urgency": "HIGH",
+        "initial_state": [
+          "DIAGNOSIS_NEEDED",
+          "PATIENT_PRESENT",
+          "VIRAL_INFECTION"
+        ],
+        "goal_state": [
+          "FOLLOWUP_SCHEDULED",
+          "TREATMENT_STARTED",
+          "VITALS_MONITORED"
+        ],
+        "steps": 5,
+        "total_duration": "5 actions | see individual durations",
+        "plan": [
+          {
+            "step": 1,
+            "action": "OrderBloodPanel",
+            "duration": "30 minutes",
+            "cost": 1
+          },
+          {
+            "step": 2,
+            "action": "ReceiveBloodResults",
+            "duration": "2 hours",
+            "cost": 0
+          },
+          {
+            "step": 3,
+            "action": "PrescribeAntiviral",
+            "duration": "10 minutes",
+            "cost": 1
+          },
+          {
+            "step": 4,
+            "action": "MonitorVitals",
+            "duration": "Continuous",
+            "cost": 0
+          },
+          {
+            "step": 5,
+            "action": "ScheduleFollowUp",
+            "duration": "5 minutes",
+            "cost": 0
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1_score,roc_auc
+1.0,1.0,1.0,1.0,not_applicable_for_multiclass_label_output
