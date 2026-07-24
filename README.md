@@ -35,19 +35,12 @@ pip install -r requirements.txt
 ## Running
 
 ```text
-python app.py
+Start the serverpython server.py Wait for the terminal to print 'Engine ready.' followed by 'Running on http://127.0.0.1:5000'. Leave this terminal window open and running — it's your serve
 ```
 
 ## Tests
 
-```text
-python -m tests.agent
-```
+Open your web browser and go to: http://127.0.0.1:5000 Click a 'Demo patients' chip to auto-fill the form, then click 'Run diagnostic agent' to see results.
 
-For additional tests, replace agents with file name eg planner:
-
-```text
-python -m tests.planner
-```
-
-And on and on.
+# Stopping the server
+ctrl + c
