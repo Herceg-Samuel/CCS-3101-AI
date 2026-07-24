@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intelligent Healthcare Diagnostic Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 2H13V11H22V13H13V22H11V13H2V11H11V2Z" fill="white"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">Intelligent Healthcare Diagnostic Assistant</div>
+        <div class="brand-subtitle">Agents · Logic · Bayesian Reasoning · ML · Deep Learning · Fuzzy Logic · Planning</div>
+      </div>
+    </div>
+    <div class="agent-pill" id="agentPill">
+      <span class="dot"></span>
+      <span id="agentPillText">Agent idle</span>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="diagnose">Diagnose</button>
+    <button class="tab-btn" data-tab="architecture">System Architecture</button>
+    <button class="tab-btn" data-tab="evaluation">Evaluation</button>
+  </nav>
+
+  <!-- ===================== DIAGNOSE TAB ===================== -->
+  <section class="tab-panel active" id="tab-diagnose">
+    <div class="diagnose-grid">
+
+      <div>
+        <div class="card">
+          <div class="card-title">Demo patients</div>
+          <div class="demo-row" id="demoRow"></div>
+          <div class="hint">Loads a real record from the training data so you can see the full pipeline run.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Patient intake</div>
+          <form id="patientForm">
+            <div class="field-row">
+              <div class="field">
+                <label>Name</label>
+                <input type="text" id="fName" placeholder="Unknown">
+              </div>
+              <div class="field">
+                <label>Gender</label>
+                <select id="fGender">
+                  <option value="Unknown">Unknown</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Age</label>
+                <input type="number" id="fAge" value="35" min="0" max="120">
+              </div>
+              <div class="field">
+                <label>Temperature (°C)</label>
+                <input type="number" id="fTemp" value="37.0" step="0.1">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label>Heart rate (bpm)</label>
+                <input type="number" id="fHr" value="80">
+              </div>
+              <div class="field">
+                <label>Blood pressure</label>
+                <input type="text" id="fBp" value="120/80">
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Symptoms</label>
+              <div class="symptom-grid" id="symptomGrid"></div>
+            </div>
+
+            <div class="field">
+              <label>Additional symptoms (free text, comma separated)</label>
+              <textarea id="fExtra" rows="2" placeholder="e.g. nausea, ear pain"></textarea>
+              <div class="hint">Checked symptoms feed every module. Free-text symptoms only inform the Knowledge Base &amp; Bayesian modules.</div>
+            </div>
+
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <span id="submitLabel">Run diagnostic agent</span>
+            </button>
+          </form>
+          <div class="error-banner" id="formError" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div id="resultsColumn">
+        <div class="card">
+          <div class="empty-state" id="emptyState">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 19h16M4 5h16M9 5v14M15 5v14"/>
+            </svg>
+            <h3>No diagnosis yet</h3>
+            <p>Load a demo patient or fill in the intake form, then run the diagnostic agent to see the full perceive &rarr; reason &rarr; act pipeline.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== ARCHITECTURE TAB ===================== -->
+  <section class="tab-panel" id="tab-architecture">
+    <div class="peas-grid" id="peasGrid"></div>
+    <div class="card-title" style="margin-bottom:4px;">Registered modules</div>
+    <p class="hint" style="margin-top:0;margin-bottom:14px;">Diagnostic modules each vote on a disease; support modules assess severity and build the treatment plan.</p>
+    <div class="arch-grid" id="archGrid"></div>
+  </section>
+
+  <!-- ===================== EVALUATION TAB ===================== -->
+  <section class="tab-panel" id="tab-evaluation">
+    <div class="eval-toolbar">
+      <div class="eval-note" id="evalNote">Loading evaluation report&hellip;</div>
+      <button class="btn-secondary" id="regenBtn">Regenerate from 5 demo patients</button>
+    </div>
+    <div id="evalContent"></div>
+  </section>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
