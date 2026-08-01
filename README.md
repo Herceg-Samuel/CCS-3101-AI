@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ## Running
 
 ```text
-Start the serverpython server.py Wait for the terminal to print 'Engine ready.' followed by 'Running on http://127.0.0.1:5000'. Leave this terminal window open and running — it's your serve
+Start the server python server.py Wait for the terminal to print 'Engine ready.' followed by 'Running on http://127.0.0.1:5000'. Leave this terminal window open and running — it's your serve
 ```
 
 ## Tests
